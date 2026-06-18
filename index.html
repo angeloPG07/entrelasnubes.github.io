@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para vos ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="intro-overlay" class="overlay">
+        <div id="intro-text-1" class="fade-text">Hola</div>
+        <div id="intro-action" class="hidden">
+            <div class="intro-message">Tengo algo pequeñito para vos</div>
+            <button class="btn-minimal" onclick="startExperience()">Comenzar</button>
+        </div>
+    </div>
+
+    <main class="experience-container" id="main-container">
+        <div id="music-control" class="music-control hidden" onclick="toggleMusic()">
+            <span id="music-icon">🔊</span>
+        </div>
+        <div class="sky-bg" id="sky">
+            <div class="stars-layer" id="stars"></div>
+            <div class="moon hidden" id="moon"></div>
+            <div class="storm-flash" id="storm-flash"></div>
+        </div>
+
+        <div class="sea-container" id="sea">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <div class="mountains-container" id="mountains">
+            <div class="mountain mt-bg mountain-1"></div>
+            <div class="mountain mt-fg mountain-2"></div>
+            <div class="mountain mt-bg mountain-3"></div>
+            <div class="mountain mt-fg mountain-4"></div>
+        </div>
+
+        <div class="forest-container" id="forest">
+            <div class="tree tr-back tree-1"></div>
+            <div class="tree tr-front tree-2"></div>
+            <div class="tree tr-back tree-3"></div>
+            <div class="tree tr-front tree-4"></div>
+            <div class="tree tr-back tree-5"></div>
+            <div class="forest-floor"></div>
+        </div>
+
+        <div class="clouds-layer" id="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+            <div class="cloud cloud-5"></div>
+        </div>
+        <div class="overlay-particles" id="particles-container"></div>
+
+        <div id="narrative-overlay" class="narrative-container">
+            <div id="narrative-text" class="typewriter"></div>
+        </div>
+
+        <div id="plane-container" class="plane-wrapper">
+            <svg class="paper-plane" viewBox="0 0 100 60" id="paper-plane-svg">
+                <path d="M10 30 L90 10 L70 50 Z" fill="#ffffff" />
+                <path d="M70 50 L90 10 L40 35 Z" fill="#e0e0e0" />
+                <path d="M40 35 L70 50 L40 45 Z" fill="#c0c0c0" />
+            </svg>
+        </div>
+
+        <div id="final-scene" class="final-container hidden">
+            <div class="letter-container">
+                <div id="envelope" class="envelope" onclick="openLetter()">
+                    <div class="envelope-lid"></div>
+                    <div class="envelope-paper">
+                        <div id="letter-text" class="letter-content"></div>
+                        <button id="close-letter-btn" class="btn-minimal small hidden" onclick="closeLetter()">Cerrar carta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <audio id="bg-music" src="musica/musicaPiano.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
